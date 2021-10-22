@@ -17,23 +17,23 @@
 <script src="/admin/bootstrap/js/bootstrap.min.js"></script>
 <script src="/admin/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 <script src="/admin/assets/js/app.js"></script>
-<script src="/admin/assets/js/custom.js"></script>
 
 <script src="/admin/assets/js/custom.js"></script>
+
 <!-- END GLOBAL MANDATORY SCRIPTS -->
-<script>
+{{-- <script>
     $('.card-img-t2').click(function(){
         var imgsrc=$(this).attr('src');
         $('.card-img-t').attr('src',imgsrc);
     });
-</script>
+</script> --}}
 <script>
     $(document).ready(function() {
         App.init();
     });
     </script>
 <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-<script src="/admin/plugins/table/datatable/datatables.js"></script>
+{{-- <script src="/admin/plugins/table/datatable/datatables.js"></script>
     <script>
         $('#zero-config').DataTable({
             "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
@@ -50,18 +50,20 @@
             "lengthMenu": [7, 10, 20, 50],
             "pageLength": 7 
         });
-    </script>
+    </script> --}}
 
 <!-- BEGIN PAGE LEVEL /admin/plugins/CUSTOM SCRIPTS -->
 <script src="/admin/plugins/apex/apexcharts.min.js"></script>
-<script src="/admin/assets/js/dashboard/dash_1.js"></script>
+<script src="/admin/assets/js/dashboard/dash_2.js"></script>
+{{-- <script src="/admin/assets/js/dashboard/dash_1.js"></script> --}}
+{{--
 <!-- BEGIN PAGE LEVEL /admin/plugins/CUSTOM SCRIPTS -->
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 <script src="/admin/assets/js/ie11fix/fn.fix-padStart.js"></script>
 <script src="/admin/plugins/editors/quill/quill.js"></script>
 <script src="/admin/plugins/sweetalerts/sweetalert2.min.js"></script>
 <script src="/admin/plugins/notification/snackbar/snackbar.min.js"></script>
-<script src="/admin/assets/js/apps/custom-mailbox.js"></script>
+<script src="/admin/assets/js/apps/custom-mailbox.js"></script> --}}
 </body>
 
 <!-- Mirrored from designreset.com/cork/ltr/demo3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Oct 2021 00:47:20 GMT -->

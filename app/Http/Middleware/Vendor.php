@@ -22,7 +22,5 @@ class Vendor
         } else {
             return redirect('login');
         }
-        
-        
     }
 }

@@ -39,17 +39,6 @@ class HomeController extends Controller
     {
         return view('users.cart');
     }
-    
-    public function home()
-    {
-        if (Auth::user('user_type') == 'admin') {
-            return redirect('/admin');
-       }elseif (Auth::user('user_type') == 'vendor') {
-            return redirect('/vendor');
-       }elseif(Auth::user('user_type')){
-            return redirect('/account');
-       }
-    }
     public function oneProd()
     {
         return view('users.products');

@@ -40,13 +40,13 @@ Route::get('/logout', function () {
 });
 Route::get('/home', function () {
         if (Auth::user()->user_type == 'admin') {
-            return redirect('/admin');
+            return redirect('/admin/index');
        }elseif (Auth::user()->user_type == 'vendor') {
             return redirect('/vendor');
        }else{
             return redirect('/account');
        }
-});
+})->middleware('auth');
 
 // Vendor Dashboard
 Route::get('/vendor', [App\Http\Controllers\VendorController::class, 'index'])->name('index')->middleware('auth','vendor');
@@ -59,7 +59,18 @@ Route::get('/vendor/categories', [App\Http\Controllers\VendorController::class, 
 Route::get('/vendor/add-category', [App\Http\Controllers\VendorController::class, 'addCategoryP'])->middleware('auth','vendor');
 Route::post('/vendor/add-category', [App\Http\Controllers\VendorController::class, 'addCategory'])->middleware('auth','vendor');
 
+Route::get('/vendor/products', [App\Http\Controllers\VendorController::class, 'products'])->middleware('auth','vendor');
+Route::get('/vendor/add-products', [App\Http\Controllers\VendorController::class, 'addProductP'])->middleware('auth','vendor');
+Route::post('/vendor/add-products', [App\Http\Controllers\VendorController::class, 'addProduct'])->middleware('auth','vendor');
+
 Route::get('/vendor/account', [App\Http\Controllers\VendorController::class, 'account'])->name('account')->middleware('auth','vendor');
 Route::post('/vendor/account', [App\Http\Controllers\VendorController::class, 'editAccount'])->name('editAccount')->middleware('auth','vendor');
+
+// Admin Dashboard
+Route::get('/admin/index', [App\Http\Controllers\AdminController::class, 'index'])->middleware('auth','admin');
+
+Route::get('/admin/account', [App\Http\Controllers\AdminController::class, 'account'])->name('account')->middleware('auth','admin');
+Route::post('/admin/account', [App\Http\Controllers\AdminController::class, 'editAccount'])->name('editAccount')->middleware('auth','admin');
+
 
 Auth::routes();

@@ -1,5 +1,5 @@
 @php
-    $cats = App\Models\Category::get();
+    $cats = App\Models\Category::limit(7)->get();
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +58,7 @@
                         <a class="login-link" href="/login" data-toggle="login-modal"><i
                                 class="d-icon-user"></i>Sign in</a>
                         <span class="delimiter">/</span>
-                        <a class="register-link ml-0" href="/register" data-toggle="login-modal">Sign Up</a>
+                        <a class="register-link ml-0" href="/login#register" data-toggle="login-modal">Sign Up</a>
                         <!-- End of Login -->
                     </div>
                 </div>
@@ -267,7 +267,7 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li>
-                                    <a href="/register">Sign Up</a>
+                                    <a href="/login#register">Sign Up</a>
                                 </li>
                                 <li>
                                     <a href="/login">Sign in</a>

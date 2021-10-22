@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
-                           <form action="/vendor/account" method="POST">
+                           <form action="/admin/account" method="POST">
                                 @csrf
                                 <div class="row mb-4">
                                     <div class="col">
@@ -63,4 +63,5 @@
                 </div>
             </div>
         </div>
+        
 @include('/vendor.includes.footer')        

@@ -1,6 +1,7 @@
 @import url('main.css');
 @import url('../../plugins/perfect-scrollbar/perfect-scrollbar.css');
 @import url('structure.css');
+
 /*
     Importing highlight.js CSS code 
 
@@ -9,4 +10,10 @@
 	@Note:-  monokai-sublime.css stylesheet is for highliting the code;
 
 */
+
 @import '../../plugins/highlight/styles/monokai-sublime.css';
+.red {
+    color: red;
+    margin-left: 10px;
+    margin-top: 10px;
+}

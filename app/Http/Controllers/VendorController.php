@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,7 +48,7 @@ class VendorController extends Controller
     public function category()
     {
         $id = Auth::user()->id;
-        $cats = Category::where('id', $id)->get();
+        $cats = Category::get();
         return view('vendor.categories', compact('cats'));
     }
     public function addCategoryP()
@@ -59,10 +60,59 @@ class VendorController extends Controller
         $data = request()->validate([
             'cat_name' => ['required', 'string', 'max:50'],
         ]);
-        $data['vendor_id'] = Auth::user()->id;
+        $data['admin_id'] = Auth::user()->id;
         $data['cat_slug'] = Str::slug(request('cat_name'));
-        $cat = Category::create([$data]);
-        Category::where('id', $cat->id)->update(['cat_id', $cat->id]);
-        return redirect('/vendor/add_categories')->with('msg', 'Category Addeed Successfully!');
+        $cat = Product::create([$data]);
+        Product::where('id', $cat->id)->update(['cat_id', $cat->id]);
+        return redirect('/vendor/categories')->with('msg', 'Category Addeed Successfully!');
+    }
+    public function products()
+    {
+        $id = Auth::user()->id;
+        $products = Product::get();
+       
+        return view('vendor.products', compact('products'));
+    }
+    public function addProductP()
+    {
+        $cats = Category::get();
+
+        return view('vendor.add_product', compact('cats'));
+    }
+    public function addProduct(Request $request)
+    {
+        $data = request()->validate([
+            'product_name' => ['required'],
+            'product_desc' => ['required'],
+            'product_images' => ['required'],
+            'product_price' => ['required'],
+        ]);
+        $files = [];
+        if($request->hasfile('product_images')){
+            foreach($request->file('product_images') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $file->move(public_path('admin/products/'), $name);  
+
+                $files[] = $name;  
+            }
+        }
+
+        $file = new Product();
+
+        $file->user_id = Auth::user()->id;
+        $file->product_images = json_encode($files);
+        $file->product_name = $request->product_name;
+        $file->product_price = $request->product_price;
+        $file->product_slug =  Str::slug(request('product_name'));
+        $file->product_price = $request->product_price;
+        $file->product_desc = $request->product_desc;
+        $file->category_id = request('category_id');
+        
+        $file->save();
+        
+        Product::where('id', $file->id)->update(['product_id'=> $file->id]);
+
+        return redirect('/vendor/products')->with('msg', 'Product Addeed Successfully!');
     }
 }

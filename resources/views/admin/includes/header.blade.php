@@ -15,28 +15,13 @@
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL /admin/plugins/CUSTOM STYLES -->
-    <link href="/admin/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
-    <link href="/admin/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="/admin/plugins/table/datatable/datatables.css">
-    <link rel="stylesheet" type="text/css" href="/admin/plugins/table/datatable/dt-global_style.css">
-        <script src="/admin/plugins/sweetalerts/promise-polyfill.js"></script>
-        
-    <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="/admin/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/assets/css/components/custom-modal.css" rel="stylesheet" type="text/css" />
-    
-         <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="/admin/assets/css/scrollspyNav.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/assets/css/components/cards/card.css" rel="stylesheet" type="text/css" />
-
-    <link href="/admin/plugins/sweetalerts/sweetalert2.min.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/plugins/sweetalerts/sweetalert.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/plugins/notification/snackbar/snackbar.min.css" rel="stylesheet" type="text/css" />
-    <link href="/admin/assets/css/apps/mailbox.css" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL /admin/plugins/CUSTOM STYLES -->
+    <link href="/admin/plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="/admin/assets/css/dashboard/dash_2.css" rel="stylesheet" type="text/css" />
+    {{-- <link href="/admin/assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" /> --}}
 
 </head>
-<body style="background: #07080f !important">
+<body>
     <!-- BEGIN LOADER -->
     <div id="load_screen"> <div class="loader"> <div class="loader-content">
         <div class="spinner-grow align-self-center"></div>
@@ -141,10 +126,10 @@
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                         <div class="">
                             <div class="dropdown-item">
-                                <a class="" href="/vendor/account"><svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a>
+                                <a class="" href="/admin/account"><svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a>
                             </div>
                             <div class="dropdown-item">
-                                <a class="" href="/vendor/all-orders"><svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> Orders
+                                <a class="" href="/admin/all-orders"><svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> Orders
                                 
                                 </a>
                             </div>
@@ -196,7 +181,7 @@
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu">
-                        <a href="/vendor" class="dropdown-toggle">
+                        <a href="/admin" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                                 <span>Dashboard</span>
@@ -204,7 +189,7 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="/vendor/all-users" class="dropdown-toggle">
+                        <a href="/admin/all-users" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                 <span>All Users</span>
@@ -212,10 +197,26 @@
                         </a>
                     </li>
                     <li class="menu">
-                        <a href="/vendor/all-orders" class="dropdown-toggle">
+                        <a href="/admin/all-vendors" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>All Vendors</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu">
+                        <a href="/admin/all-orders" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http:/www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
                                 <span>Order</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu">
+                        <a href="/admin/all-users" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=""><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>Dispatch Riders</span>
                             </div>
                         </a>
                     </li>
@@ -231,10 +232,10 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="category" data-parent="#accordionExample">
                             <li>
-                                <a href="/vendor/add-category"> Add Category </a>
+                                <a href="/admin/add-category"> Add Category </a>
                             </li>
                             <li>
-                                <a href="/vendor/categories"> All Categories  </a>
+                                <a href="/admin/categories"> All Categories  </a>
                             </li>
                         </ul>
                     </li>
@@ -250,15 +251,15 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="products" data-parent="#accordionExample">
                             <li>
-                                <a href="/vendor/add-products"> Add Products </a>
+                                <a href="/admin/add-products"> Add Products </a>
                             </li>
                             <li>
-                                <a href="/vendor/all-products"> All Products  </a>
+                                <a href="/admin/all-products"> All Products  </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="/vendor/account" class="dropdown-toggle">
+                        <a href="/admin/account" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                 <span>Account</span>
